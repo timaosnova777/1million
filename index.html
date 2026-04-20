@@ -401,13 +401,54 @@
     }
     .proof-caption {
       padding: 12px 16px 16px;
-      font-size: 13px;
-      color: var(--muted);
+      font-size: 14px;
+      color: var(--text);
       line-height: 1.6;
       text-align: center;
+      border-top: 1px solid rgba(255,209,0,0.15);
     }
     .proof-caption strong {
       color: var(--text);
+    }
+
+
+    /* HOW IT WORKS */
+    .howto {
+      margin: 22px 0 0;
+      background: rgba(255,255,255,0.04);
+      border: 1.5px solid rgba(255,209,0,0.3);
+      border-radius: 20px;
+      padding: 20px 18px;
+    }
+    .howto-title {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 22px;
+      color: #fff;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .howto-title span { color: var(--gold); }
+    .howto-steps { display: flex; flex-direction: column; gap: 12px; }
+    .howto-step {
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+    .howto-num {
+      width: 28px; height: 28px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--gold), var(--gold2));
+      color: #000; font-weight: 900; font-size: 13px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 12px rgba(255,209,0,0.4);
+      margin-top: 1px;
+    }
+    .howto-text { font-size: 14px; line-height: 1.55; color: var(--text); }
+    .howto-text strong { color: var(--gold); }
+    .howto-arrow {
+      text-align: center;
+      color: rgba(255,209,0,0.4);
+      font-size: 18px;
+      margin: -4px 0;
     }
 
   </style>
@@ -453,46 +494,34 @@
 
   <div class="content">
 
-    <div class="income-card">
-      <div class="income-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><circle cx="12" cy="12" r="9" stroke="#FFD100" stroke-width="1.5"/><path d="M9 10h3.5a1.5 1.5 0 0 1 0 3H9m0 0h5m-5 0V9m0 2h2" stroke="#FFD100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="income-text">
-        Всего 1₽ — и ты получаешь готовые прогнозы от аналитиков. <strong>Просто следуй им — и первые 2000₽ уже сегодня.</strong>
-      </div>
     </div>
-
-    <div class="about">
-      Никакого опыта не нужно — аналитики уже всё посчитали. <strong>Твоя задача — просто повторить.</strong>
-    </div>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-num"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M9 9V3.5a2.5 2.5 0 0 1 5 0V9" stroke="#000" stroke-width="1.5" stroke-linecap="round"/><path d="M9 9H6a3 3 0 0 0 0 6h.5" stroke="#000" stroke-width="1.5" stroke-linecap="round"/><path d="M15 9h-6v6l1.5 4.5a2 2 0 0 0 3.8-.3L15 15V9z" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="step-body">
-          <div class="step-title">Регистрируешься за 1 минуту</div>
-          <div class="step-desc">Через ВК или Telegram — быстро и просто.</div>
+<!-- HOW IT WORKS -->
+    <div class="howto">
+      <div class="howto-title">Что происходит <span>после клика</span></div>
+      <div class="howto-steps">
+        <div class="howto-step">
+          <div class="howto-num">1</div>
+          <div class="howto-text">Попадаешь на сайт GameSport — <strong>регистрируешься за 30 секунд</strong> через почту, номер телефона или Telegram</div>
         </div>
-      </div>
-      <div class="step">
-        <div class="step-num"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><rect x="2" y="6" width="20" height="14" rx="2" stroke="#000" stroke-width="1.5"/><path d="M16 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0z" fill="#000"/><path d="M2 10h20" stroke="#000" stroke-width="1.5"/></svg></div>
-        <div class="step-body">
-          <div class="step-title">Активируешь доступ за 1 ₽</div>
-          <div class="step-desc">Получаешь готовые прогнозы от аналитиков.</div>
+        <div class="howto-arrow">↓</div>
+        <div class="howto-step">
+          <div class="howto-num">2</div>
+          <div class="howto-text">Выбираешь тариф <strong>Lite или Pro</strong> — оплачиваешь <strong>всего 1₽</strong> за первый месяц</div>
         </div>
-      </div>
-      <div class="step">
-        <div class="step-num"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="3" y1="6" x2="21" y2="6" stroke="#000" stroke-width="1.5" stroke-linecap="round"/><path d="M16 10a4 4 0 0 1-8 0" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="step-body">
-          <div class="step-title">Зарабатываешь</div>
-          <div class="step-desc">Повторяешь прогноз — выходишь в плюс. Всё просто.</div>
+        <div class="howto-arrow">↓</div>
+        <div class="howto-step">
+          <div class="howto-num">3</div>
+          <div class="howto-text">Получаешь готовые прогнозы на CS2, Dota2, LoL — <strong>просто повторяй ставки</strong></div>
+        </div>
+        <div class="howto-arrow">↓</div>
+        <div class="howto-step">
+          <div class="howto-num">4</div>
+          <div class="howto-text">Выходишь в плюс — <strong>первые 2000₽ уже в первый день</strong> по статистике прошлых месяцев</div>
         </div>
       </div>
     </div>
 
-    <div class="perks">
-      <div class="perk"><span class="perk-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M13 2L4.5 13.5H12L11 22L19.5 10.5H12L13 2Z" stroke="#FFD100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="perk-text">CS2 · Dota2</span></div>
-      <div class="perk"><span class="perk-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><rect x="3" y="11" width="18" height="11" rx="2" stroke="#FFD100" stroke-width="1.5"/><path d="M7 11V7a5 5 0 0 1 9.9-1" stroke="#FFD100" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="perk-text">LoL · R6</span></div>
-      <div class="perk"><span class="perk-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M20 12v10H4V12" stroke="#FFD100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 7H2v5h20V7z" stroke="#FFD100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 22V7" stroke="#FFD100" stroke-width="1.5" stroke-linecap="round"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" stroke="#FFD100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" stroke="#FFD100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="perk-text">Гарантия возврата</span></div>
-    </div>
+</div>
 
     <!-- SOCIAL PROOF SCREENSHOT -->
     <div class="proof-block">
@@ -506,40 +535,18 @@
       </div>
       <div class="proof-caption">
         Это реальная таблица прогнозов за один день — <strong>Lite даёт +14 100₽, Pro +8 640₽.</strong> Просто следуй сигналам.
-      </div>
-    </div>
 
-    <div class="bill-banner">
-      <div class="bill-banner-bg"></div>
-      <div class="bill-overlay">
-        <div class="bill-label">Реально заработать в первый день</div>
-        <div class="bill-amount">2 000 ₽</div>
-        <div class="bill-sub">подписка за 1₽ · просто следуй прогнозам</div>
-      </div>
-    </div>
-
-    <!-- НИЖНЯЯ КНОПКА → TELEGRAM -->
+    <!-- TG -->
     <div class="tg-section">
-      <div class="tg-title">Скрины оплат и реальные отзывы</div>
-      <div class="tg-desc">
-        Живые скрины выплат подписчиков, реальные отзывы<br>и пошаговая инструкция — всё в одном месте
-      </div>
-      <div class="tg-features">
-        <span class="tg-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="13" r="4" stroke="currentColor" stroke-width="1.5"/></svg> Скрины оплат</span>
-        <span class="tg-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Реальные отзывы</span>
-        <span class="tg-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><line x1="8" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="3" y1="6" x2="3.01" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="12" x2="3.01" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="18" x2="3.01" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Инструкция</span>
-        <span class="tg-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M13 2L4.5 13.5H12L11 22L19.5 10.5H12L13 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Бонусы</span>
-      </div>
+      <div class="tg-title">Скрины и отзывы</div>
+      <div class="tg-desc">Реальные выплаты подписчиков и пошаговая инструкция — в нашем Telegram</div>
       <a href="https://t.me/+xsfTnVrBlIc0Mzcy" class="tg-btn" target="_blank" rel="noopener" id="tg-btn">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 12h4m-2-2v4M15 13h.01M18 11h.01M5 8h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2z" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.16 13.26l-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.99.3z"/></svg>
         Открыть Telegram-канал
       </a>
-      <div class="tg-note">Бесплатно · Уже 1000+ участников · Реальные выплаты</div>
     </div>
 
-    <p class="disclaimer">
+    <p class="disclaimer"><p class="disclaimer">
       Ставки на спорт сопряжены с риском потери средств. 18+
     </p>
 
